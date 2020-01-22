@@ -39,9 +39,9 @@
             //hay que poner {{$estudiante->id}} en el form para que borre el alumno en el que se le dio al botón de eliminar, sino borraría el primer alumno de la tabla
         } else{
             event.preventDefault(); //Este método cancela el evento si éste es cancelable, sin detener el resto del funcionamiento del evento, es decir, puede ser llamado de nuevo.
-        }
-        "
-        class="btn btn-raised btn-danger btn-sm" > <i class="fas fa-trash-alt"></i>
+        }"
+        class="btn btn-raised btn-danger btn-sm" >
+          <i class="fas fa-trash-alt"></i>
         </button>
       </td>
     </tr> 
