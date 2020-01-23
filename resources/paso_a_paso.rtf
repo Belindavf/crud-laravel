@@ -11,7 +11,7 @@
 - Comprobar que funciona poniendo "composer" en el shell. Comprobar en el PATH la ruta de instalaci\'f3n.\par
 - Instalar el instalador de Laravel con el siguiente comando: \b composer global require laravel/installer\b0\par
 - En una carpeta de proyectos laravel (ejecutar en la shell): \b laravel new crud\par
-\b0 - Entramos en la carpeta "crud" y abrimos el Visual Studio Code con: \b code .\par
+\b0 - Entramos en la carpeta \i crud \i0 y abrimos el Visual Studio Code con: \b code .\par
 \b0 - Desde el XAMP abrimos el fichero httpd.conf: Apache > Config > Apache (httpd.conf)\par
 
 \pard\sa200\sl240\slmult1 - Editamos el documento cambiando la configuraci\'f3n t\'edpica por la configuraci\'f3n de laravel:\par
@@ -30,25 +30,23 @@ DocumentRoot "C:/Users/wadmin/Documents/laravel/crud/public"\par
 \cf0\par
 
 \pard\sa200\sl240\slmult1 - Reiniciar Apache\par
-- Comprobar que funciona en el navegador con 'localhost'\i\par
-\i0\par
-  \b Git:\b0\par
+- Comprobar que funciona en el navegador con 'localhost'\par
 
-\pard\sa200\sl276\slmult1 -  Inicializar el repositorio en VSCode.\par
+\pard\sa200\sl276\slmult1 -  Inicializamos el repositorio Git en VSCode (\b git init\b0 )\par
 
 \pard\sa200\sl360\slmult1 - Hago el primer commit en el icono (check).\par
 
 \pard\sa200\sl240\slmult1 - Lo sincronizo a mi cuenta de github.com:\par
 
 \pard\sa200\sl360\slmult1\b\tab git remote add origin {{\field{\*\fldinst{HYPERLINK https://github.com/Belindavf/crud-laravel }}{\fldrslt{https://github.com/Belindavf/crud-laravel\ul0\cf0}}}}\f0\fs22\par
-\b0 - Le doy a la nube de la barra inferior azul y compruebo que el c\'f3digo se ha subido a \b github.com\par
-\b0\par
+\b0 - Le doy a la nube de la barra inferior azul y compruebo que el c\'f3digo se ha subido a {\i{\field{\*\fldinst{HYPERLINK https://github.com/ }}{\fldrslt{https://github.com/\ul0\cf0}}}}\b\f0\fs22\par
+\b0 - Para probar como funciona MDBootstrap descargamos unas hojas de estilos, pinchando en la versi\'f3n free (\b DIRECT DOWNLOAD\b0 ) de {{\field{\*\fldinst{HYPERLINK https://mdbootstrap.com/docs/jquery/getting-started/download/ }}{\fldrslt{https://mdbootstrap.com/docs/jquery/getting-started/download/\ul0\cf0}}}}\b\f0\fs22\par
+\b0 - La guardamos en la carpeta \i public\i0  con el nombre de \i estilos-MDBootstrap_4.11\i0\par
 - El controlador \i router/web.php \i0 nos deriva a la p\'e1gina welcome que est\'e1 en \i resources/view/welcome.blade.php\i0\par
-- Descargamos la versi\'f3n free de {{\field{\*\fldinst{HYPERLINK https://mdbootstrap.com/docs/jquery/getting-started/download/ }}{\fldrslt{https://mdbootstrap.com/docs/jquery/getting-started/download/\ul0\cf0}}}}\f0\fs22  pincando en \b DIRECT DOWNLOAD\b0\par
 - Crear en \i crud/resources/views/layout \i0 los archivos \i navbar.blade.php\i0 , \i main.blade.php \i0 y \i footer.blade.php\par
 \i0 - A\'f1adimos a \i main.blade.php \i0 el contenido de \i crud/public/estilos-MDBootstrap_4.11/index.html\i0\par
 
-\pard\sa200\sl240\slmult1 - Si en el \i welcome.blade.php \i0 ponemos una sola l\'ednea \cf3 @extends('layouts.main')\cf0 , podemos ver lo que se tenga en el cuerpo del \b main.blade.php\b0 , que en este caso ser\'eda:\par
+\pard\sa200\sl240\slmult1 - Si en el \i welcome.blade.php \i0 ponemos una sola l\'ednea \cf3 @extends('layouts.main')\cf0 , podemos ver lo que se tenga en el cuerpo del \i main.blade.php\i0 , que en este caso ser\'eda:\par
 
 \pard\sl240\slmult1 <!-- Start your project here-->\par
 \cf3 @include('layouts.navbar')\par
@@ -71,8 +69,8 @@ DocumentRoot "C:/Users/wadmin/Documents/laravel/crud/public"\par
 \pard\sl360\slmult1 - Para que la p\'e1gina principal vaya cogiendo forma, copiamos en el \i navbar.blade.php\i0  el c\'f3digo \b Basic example \b0 de {{\field{\*\fldinst{HYPERLINK https://mdbootstrap.com/docs/jquery/navigation/navbar/ }}{\fldrslt{https://mdbootstrap.com/docs/jquery/navigation/navbar/\ul0\cf0}}}}\f0\fs22  y copiamos en el \i footer.blade.php\i0  el c\'f3digo \b Copyright \b0 de {{\field{\*\fldinst{HYPERLINK https://mdbootstrap.com/docs/jquery/navigation/footer/ }}{\fldrslt{https://mdbootstrap.com/docs/jquery/navigation/footer/\ul0\cf0}}}}\f0\fs22\par
 
 \pard\sa200\sl240\slmult1\par
-- Crear una base de datos en phpMyAdmin (\i laravel_crud\i0 )\par
-- Modificar en el \i .env \i0 el contenido referente a la base de datos, con la que creamos nosotros:\par
+- Crear una base de datos en phpMyAdmin llamada "\i laravel_crud"\i0  con el usuario "\i laravel_crud_user" \i0  y la contrase\'f1a "\i abc123."\i0\par
+- Modificar en el fichero \i .env \i0 el contenido referente a la base de datos, con la que creamos nosotros:\par
 
 \pard\sl240\slmult1 (l\'ednea 12)\par
 \cf3 DB_DATABASE=laravel_crud\par
@@ -123,8 +121,7 @@ localhost/321 \par
 \pard\sa200\sl240\slmult1\b\par
 \b0 - Creamos un modelo con \par
 \b\tab php artisan make:model Students -m\par
-\b0 que crea un archivo que editaremos posteriormente:\par
-\i database/migrations/2020_01_15_100904_create_students_table.php\b\i0\par
+\b0 que crea un fichero \i database/migrations/2020_01_15_100904_create_students_table.php \i0 en d\'f3nde definimos los campos de la tabla Students:\b\par
 
 \pard\sl240\slmult1\cf3\b0 public function up() \{\par
 \tab Schema::create('students', function (Blueprint $table) \{\par
@@ -139,11 +136,11 @@ localhost/321 \par
 
 \pard\sa200\sl240\slmult1\cf0\par
 - Migramos todos los esquemas con el comando \b php artisan migrate \b0 y comprobamos el resultado en MySql\par
-\par
-- A\'f1adimos esta l\'ednea de c\'f3digo en \i web.php\i0 :\par
-\cf3 Route::get('/create',  'StudentController@create') -> name('create');\par
-\cf0\par
-- Creamos la funci\'f3n create() en \i StudentController.php \i0 :\par
+- A\'f1adimos esta ruta en \i web.php\i0 :\par
+
+\pard\sa200\sl360\slmult1\cf3 Route::get('/create',  'StudentController@create') -> name('create');\cf0\par
+
+\pard\sa200\sl240\slmult1 - Creamos la funci\'f3n create() en \i StudentController.php \i0 :\par
 
 \pard\sl240\slmult1\cf3 public function create() \{\par
 \tab return view ('Hola voy a crear algo grande');\par
@@ -171,10 +168,11 @@ localhost/321 \par
 \tab\tab\cf3 //return view ('Hola voy a crear algo grande');\par
 \cf0 por esta: \tab\cf3 return view('create');\par
 \par
-\cf0 - Creamos un archivo: \i resources/views/create.blade.php\i0\par
+\cf0 - Creamos una p\'e1gina: \i resources/views/create.blade.php\i0\par
 
-\pard\sl240\slmult1 Copio el c\'f3digo de \i welcome.blade.php \i0 cambiando la l\'edneas del html(<h1>) por el siguiente c\'f3digo   \b Register / Sign up form\par
-\tab Default form register\b0\par
+\pard\sl240\slmult1 Copio el c\'f3digo de \i welcome.blade.php \i0 cambiando la l\'edneas del html(<h1>) por el c\'f3digo\par
+\b Register / Sign up form\par
+Default form register\b0\par
 {{\field{\*\fldinst{HYPERLINK https://mdbootstrap.com/docs/jquery/forms/basic/ }}{\fldrslt{https://mdbootstrap.com/docs/jquery/forms/basic/\ul0\cf0}}}}\f0\fs22\par
 \par
 \par
@@ -216,7 +214,6 @@ class StudentController extends Controller\{\cf0\par
 
 \pard\sa200\sl240\slmult1\par
 \cf0 - Ahora desde el navegador con {{\field{\*\fldinst{HYPERLINK http://localhost/create }}{\fldrslt{http://localhost/create\ul0\cf0}}}}\f0\fs22  si a\'f1adimos en 'sign in' un nuevo alumno deber\'eda aparecer en nuestra base de datos (\i laravel_crud\i0 ) en la tabla students el nuevo alumno creado con su nombre, apellidos, email y tel\'e9fono.\par
-\par
 - A\'f1ado un alert en el  \i welcome.blade.php \i0 para saber que insertamos correctamente:\par
 
 \pard\sl240\slmult1\cf3 @if (session('successMsg'))\par
@@ -237,20 +234,14 @@ class StudentController extends Controller\{\cf0\par
 @endif\par
 
 \pard\sa200\sl276\slmult1\cf0\b\par
-- \b0 Comprobamos en al navegador que funcionan los alert:\par
+
+\pard\sa200\sl240\slmult1 - \b0 Comprobamos en al navegador que funcionan los alert:\par
 \tab -> mensaje de color \cf4 verde \cf0 en caso de datos introducidos correctamente\par
 \tab -> mensaje de color \cf5 rojo \cf0 en caso de que exista alg\'fan error\par
-\par
-- Editar index en \i StudentController.php\i0 :\par
 
-\pard\sl276\slmult1\cf3 public function index() \{\par
-\tab //return view ('welcome');\par
-\tab $estudiantes = Students::all();\par
-\tab return view('welcome', compact('estudiantes'));\par
-\}\par
-\par
+\pard\sl276\slmult1\cf3\par
 
-\pard\sa200\sl276\slmult1\cf0 - Crear una tabla en la p\'e1gina de bienvenida y a\'f1adir botones para realizar acciones (editar, eliminar alumnos) en \i resources/views/welcome.blade.php\i0 :\par
+\pard\sa200\sl276\slmult1\cf0 - Crear en la p\'e1gina home una tabla copiada de MDBootstrap que se adapte a nuestro contenido, para la consulta de todos los registros y poder a\'f1adir botones para realizar acciones (editar, eliminar alumnos) en \i resources/views/welcome.blade.php\i0 :\par
 
 \pard\sl276\slmult1\cf3 @endif\cf0\par
 \cf3 <table class="table">\par
@@ -283,7 +274,16 @@ class StudentController extends Controller\{\cf0\par
 @endsection\cf0\par
 
 \pard\sa200\sl276\slmult1\par
-- Creamos dos rutas nuevas para realizar las modificaciones (siempre en \i routes/web.php\i0 ):\par
+- Editar el index en el controlador \i StudentController.php\i0  para pasar todos los estudiantes:\par
+
+\pard\sl276\slmult1\cf3 public function index() \{\par
+\tab //return view ('welcome');\par
+\tab\b $estudiantes = Students::all();\b0\par
+\tab\b return view('welcome', compact('estudiantes'));\b0\par
+\}\par
+\cf0\par
+
+\pard\sa200\sl276\slmult1 - Creamos dos rutas nuevas para realizar las modificaciones (siempre en \i routes/web.php\i0 ):\par
 
 \pard\sl276\slmult1\cf3 Route::get('/edit/\{id\}',  'StudentController@edit') -> name('edit');\par
 Route::post('/update/\{id\}',  'StudentController@update') -> name('update');\par
@@ -297,9 +297,9 @@ Route::post('/update/\{id\}',  'StudentController@update') -> name('update');\pa
 \tab //modelo vista controlador:\par
 \tab return view('edit', compact('estudiante'));\par
 \}\cf0\par
+\par
 
-\pard\sa200\sl276\slmult1\par
-- Crear la p\'e1gina edit ->  \i resources/views/edit.blade.php\par
+\pard\sa200\sl276\slmult1 - Crear la p\'e1gina edit ->  \i resources/views/edit.blade.php\par
 \i0 Copiamos el c\'f3digo del \i create.blade.php \i0 pero\par
 
 \pard\sa200\sl240\slmult1\tab Cambiamos la acci\'f3n del <form>:\par
@@ -343,28 +343,29 @@ Route::post('/update/\{id\}',  'StudentController@update') -> name('update');\pa
 
 \pard\sa200\sl276\slmult1\b\par
 
-\pard\sl240\slmult1 - \b0 Para borrar un alumno de forma simple bastar\'eda con:\b\par
+\pard\sl240\slmult1\b0 -\b  \b0 Para borrar un alumno de forma simple bastar\'eda con:\b\par
 \b0\tab Crear una nueva ruta (siempre en \i web.php\i0 ):\par
 \par
 \cf3 //                        fichero creado en StudentController -> nombre que se la da\par
 
 \pard\sl480\slmult1 Route::get('/delete/\{id\}', 'StudentController@delete') -> name('delete');\cf0\par
-\tab A\'f1adir una nueva funci\'f3n a \i StudentController.php\i0 :\par
+
+\pard\sa200\sl276\slmult1\tab A\'f1adir la ruta al bot\'f3n de eliminar, en \i welcome.blade.php\i0 :\par
+\cf3 <a class="btn btn-raised btn-danger btn-sm" \b href="\{\{route('delete',$estudiante->id)\}\}" \b0 > <i class="fas fa-trash-alt"></i></a>\par
+
+\pard\sl480\slmult1\cf0\tab Crear el controlador en \i StudentController.php\i0 :\par
 
 \pard\sl276\slmult1\cf3 public function delete($id)\{\par
         $estudiante = Students::find($id);\par
         $estudiante->delete();\par
         return redirect (route('home'))->with('successMsg','Estudiante borrado');\par
 \}\par
-\cf0\par
 
-\pard\sa200\sl276\slmult1\tab A\'f1adir la ruta al bot\'f3n de eliminar, en \i welcome.blade.php\i0 :\par
-\cf3 <a class="btn btn-raised btn-danger btn-sm" \b href="\{\{route('delete',$estudiante->id)\}\}" \b0 > <i class="fas fa-trash-alt"></i></a>\par
-\cf0\par
-\b - \b0 Para un borrado m\'e1s complejo (con confirmaci\'f3n y m\'e9todo {{\field{\*\fldinst{HYPERLINK http:delete }}{\fldrslt{http:delete\ul0\cf0}}}}\f0\fs22 ), se siguen estos pasos:\par
+\pard\sa200\sl276\slmult1\cf0\par
+-\b  \b0 Para un borrado m\'e1s complejo (con confirmaci\'f3n y m\'e9todo {{\field{\*\fldinst{HYPERLINK http:delete }}{\fldrslt{http:delete\ul0\cf0}}}}\f0\fs22 ), se siguen estos pasos:\par
 \tab Cambiamos la ruta del \i web.php\i0\par
 \cf3 Route::delete('/delete/\{id\}', 'StudentController@delete') -> name('delete');\cf0\par
-\tab En \i welcome.blade.php\i0  cambiamos para el bot\'f3n de eliminar, la etiqueta <a>  por un formulario y un bot\'f3n:\par
+\tab En \i welcome.blade.php\i0  introducimos c\'f3digo javascript para el bot\'f3n de eliminar, cambiamos la etiqueta <a>  por un formulario y un bot\'f3n:\par
 
 \pard\sl276\slmult1\cf3 <form id="delete_form_\{\{$estudiante->id\}\}" action="\{\{route('delete',$estudiante->id)\}\}" method="post" style="display: none;" >\par
 \tab\{\{csrf_field()\}\}\par
@@ -381,17 +382,17 @@ class="btn btn-raised btn-danger btn-sm" href="">\par
 </button>\par
 
 \pard\sa200\sl276\slmult1\cf0\par
-- Introducimos en el index de \i StudentController.php \i0 el m\'e9todo \b paginate()\b0 , que nos permite ver a los alumnos en varias p\'e1ginas, en lugar de todos seguidos en la misma:\par
+- Para paginaci\'f3n introducimos en el controlador (\i StudentController.php\i0 ) el m\'e9todo \b paginate()\b0 , que nos permite ver el n\'famero de alumnos registrados en varias p\'e1ginas, en lugar de todos seguidos en la misma:\par
 
 \pard\sl276\slmult1\cf3 public function index() \{\par
 \tab //return view ('welcome');\par
 \tab //$estudiantes = Students::all();\par
-\tab $estudiantes = Students::pagination(5);\par
+\tab $estudiantes = Students::paginate(5);  //<-- 5 registros por p\'e1gina\par
 \tab return view('welcome', compact('estudiantes'));\par
 \}\par
 
 \pard\sa200\sl276\slmult1\cf0\par
--  Finalmente a\'f1adimos al final del documento \i welcome.blade.php\i0  la l\'ednea que nos permite cambiar de una p\'e1gina a otra para poder ver a todos los alumnos:\par
+-  Finalmente a\'f1adimos en la vista \i welcome.blade.php\i0  d\'f3nde queramos tener el control (al final del documento) que nos permite cambiar de una p\'e1gina a otra para poder ver a todos los alumnos:\par
 
 \pard\sa200\sl240\slmult1\cf3\b\{\{$estudiantes->links()\}\}\par
 \b0 @endsection\par
